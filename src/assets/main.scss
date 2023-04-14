@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cera Pro';
+
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('./fonts/Cera\ Pro\ Regular\ Italic.otf'),
+        url('./fonts/Cera\ Pro\ Bold.otf'),
+        url('./fonts/Cera\ Pro\ Medium.otf'),
+        url('./fonts/Cera\ Pro\ Light.otf'),
+        url('./fonts/CeraPro-Regular.woff') url('./fonts/CeraPro-Medium.woff')
+}
+
+.vertical-line {
+    width: 1px;
+    height: 38px;
+    background-color: #ECECEC;
+}
+
+.container {
+    padding: 0 10%;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: 1250px) {
+        padding: 0 7%;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 3%;
+    }
+}
