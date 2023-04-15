@@ -25,6 +25,8 @@
     padding: 0 10%;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
+    max-width: 1600px;
+    width: 100%;
 
     @media (max-width: 1250px) {
         padding: 0 7%;
