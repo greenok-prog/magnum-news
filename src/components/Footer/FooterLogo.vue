@@ -9,7 +9,7 @@
 import logo from '@/assets/logo.png'
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .footer-logo {
     padding-top: 40px;
 

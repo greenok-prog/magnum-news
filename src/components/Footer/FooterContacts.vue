@@ -45,7 +45,7 @@ import magnumGoIcon from '@/assets/icons/mgo.png'
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .footer-contacts {
     display: flex;
     flex-direction: column;

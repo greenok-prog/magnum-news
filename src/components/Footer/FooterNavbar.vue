@@ -18,7 +18,7 @@ import FooterContacts from '@/components/Footer/FooterContacts.vue'
 
 
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 .footer-navbar {
     margin-top: 36px;
 

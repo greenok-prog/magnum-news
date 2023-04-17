@@ -12,7 +12,7 @@ const props = defineProps<FooterLinkProps>()
 const { name, to } = props
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .links-list__item {
     list-style-type: none;
     font-weight: 400;

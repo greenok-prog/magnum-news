@@ -33,3 +33,13 @@ export const getCategories = async () => {
 
     }
 }
+
+export const fetchNewsItem = async (newsId: number) => {
+    try {
+        const res = await axios.get(`https://magnum.kz:1337/api/news/${newsId}?populate%5Bnews_category%5D=%2A&populate%5Bshops%5D=%2A&populate%5Bimage%5D=%2A&populate%5Blocalizations%5D%5Bpopulate%5D%5Bimage%5D=%2A&locale=ru`)
+        return res.data.data
+    } catch (e) {
+        console.log(e);
+
+    }
+}

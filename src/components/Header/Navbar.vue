@@ -19,7 +19,7 @@ const links: string[] = ['Magnum Club', 'Magnum Go', 'Наши бренды', '�
 
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .vertical-line {
     margin-right: -18px;
     margin-left: -18px;

@@ -1,5 +1,5 @@
 <template>
-    <main class="container">
+    <main class="">
         <PageHistory class="history-section" />
         <Title class="title" title="Magnum Life" />
 
@@ -77,7 +77,7 @@ getorderByItems()
 
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .history-section {
     margin-top: 48px;
 }

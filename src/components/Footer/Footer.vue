@@ -12,7 +12,7 @@ import FooterLogo from './FooterLogo.vue';
 import FooterNavbar from '@/components/Footer/FooterNavbar.vue'
 import FooterBottom from './FooterBottom.vue';
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 .footer {
     margin-top: 70px;
     box-shadow: 0px 7px 28px rgba(0, 0, 0, 0.15);

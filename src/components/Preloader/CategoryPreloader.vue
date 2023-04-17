@@ -1,13 +1,11 @@
 <template>
-     <ul class="sorting-list">
-        <li 
-            v-for="(button, index) in [1,2,3,4]" :key="index" class="sorting-list__item">
+    <ul class="sorting-list">
+        <li v-for="(button, index) in [1, 2, 3, 4]" :key="index" class="sorting-list__item">
         </li>
     </ul>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
 .sorting-list {
     display: flex;
     justify-content: flex-start;
@@ -28,6 +26,6 @@
         cursor: pointer;
     }
 
-   
+
 }
 </style>

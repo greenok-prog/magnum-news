@@ -8,12 +8,14 @@
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('./fonts/Cera\ Pro\ Regular\ Italic.otf'),
-        url('./fonts/Cera\ Pro\ Bold.otf'),
-        url('./fonts/Cera\ Pro\ Medium.otf'),
-        url('./fonts/Cera\ Pro\ Light.otf'),
-        url('./fonts/CeraPro-Regular.woff') url('./fonts/CeraPro-Medium.woff')
+    src: local('@');
+    src: url('./fonts/Cera\ Pro\ Regular.otf'), url('./fonts/Cera\ Pro\ Black\ Italic.otf'), url('./fonts/Cera\ Pro\ Bold.otf'), url('./fonts/Cera\ Pro\ Bold\ Italic.otf'), url('./fonts/Cera\ Pro\ Light.otf'), url('./fonts/Cera\ Pro\ Light\ Italic.otf'), url('./fonts/Cera\ Pro\ Medium.otf'), url('./fonts/Cera\ Pro\ Medium\ Italic.otf'), url('./fonts/Cera\ Pro\ Medium\ Italic.otf'), url('./fonts/Cera\ Pro\ Regular.otf'),
+        url('./fonts/Cera\ Pro\ Regular\ Italic.otf'), url('./fonts/Cera\ Pro\ Thin.otf'), url('./fonts/Cera\ Pro\ Thin\ Italic.otf ');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
 
 .vertical-line {
     width: 1px;
@@ -22,17 +24,21 @@
 }
 
 .container {
-    padding: 0 10%;
+
+    padding-left: 10%;
+    padding-right: 10%;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
     max-width: 1600px;
     width: 100%;
 
     @media (max-width: 1250px) {
-        padding: 0 7%;
+        padding-left: 7%;
+        padding-right: 7%;
     }
 
     @media (max-width: 1000px) {
-        padding: 0 3%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 }

@@ -2,7 +2,7 @@
     <ul class="sorting-list">
         <li @click="$event => selectOrderHandler(button)" :class="selectedOrder.id === button.id ? 'active' : ''"
             v-for="(button) in props.sortingButtons" :key="button.id" class="sorting-list__item">
-            {{ button.attributes.label}}
+            {{ button.attributes.label }}
         </li>
     </ul>
 </template>
@@ -24,20 +24,20 @@ const selectOrderHandler = (button: category) => {
 
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .sorting-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  
+    overflow-y: hidden;
+    white-space: nowrap;
+
     @media (max-width:520px) {
-        
+        margin-bottom: 20px;
         overflow-x: auto;
-        
+
     }
 
     &__item {
@@ -51,11 +51,11 @@ const selectOrderHandler = (button: category) => {
         border-radius: 15px;
         margin-right: 10px;
         max-height: 45px;
-       display: inline-block;
-        
+        display: inline-block;
+
         cursor: pointer;
-        
-       
+
+
     }
 
     .active {
@@ -63,7 +63,8 @@ const selectOrderHandler = (button: category) => {
         color: #FFFFFF;
     }
 }
-.sorting-list::-webkit-scrollbar{
+
+.sorting-list::-webkit-scrollbar {
     display: none;
 }
 </style>

@@ -4,14 +4,19 @@
     </div>
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .footer-bottom {
     background-color: #ECECEC;
     margin-top: 32px;
     margin-bottom: 20px;
+    width: 100%;
 
     &__text {
         padding: 18px 0;
+
+        @media (max-width:700px) {
+            font-size: 14px;
+        }
     }
 }
 </style>

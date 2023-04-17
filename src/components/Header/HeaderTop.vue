@@ -1,8 +1,8 @@
 <template>
     <div class="header-top">
-        <img :src="burgerBtnIcon" class="burger-button" alt="burgerButton">
-        <img :src="logoImage" class="header-top__logo logo" alt="logo">
-        <img :src="shortLogoImage" class="header-top__logo logo-short" alt="logo short">
+        <img :src="burgerButtonIcon" class="burger-button" alt="burgerButton">
+        <img :src="logoIcon" class="header-top__logo logo" alt="logo">
+        <img :src="logoShortIcon" class="header-top__logo logo-short" alt="logo short">
         <div class="header-top__corp">
             <img :src="corpIcon" alt="arrow left">
             <p>Magnum Corp.</p>
@@ -16,13 +16,13 @@
             <div class="vertical-line"></div>
             <div class="sorting-field">
                 <p>по товарам</p>
-                <img :src="sortArrowIcon" alt="arrow down">
+                <img :src="sortArrowDownIcon" alt="arrow down">
             </div>
         </div>
         <div class="location-block">
             <div class="location-block__city">
                 <img :src="locationIcon" alt="location icon">
-                <p>АЛА</p>
+                <p>АЛМ</p>
             </div>
             <div class="vertical-line"></div>
             <div class="location-block__lang">RU</div>
@@ -31,18 +31,13 @@
 </template>
 
 <script lang="ts" setup>
-import burgerBtnIcon from '@/assets/icons/burgerButton.svg'
-import logoImage from '@/assets/logo.png'
-import shortLogoImage from '@/assets/shortLogo.png'
-import corpIcon from '@/assets/icons/corp.svg'
-import corpInfoIcon from '@/assets/icons/corpInfo.svg'
-import searchIcon from '@/assets/icons/search.svg'
-import sortArrowIcon from '@/assets/icons/sortArrowDown.svg'
-import locationIcon from '@/assets/icons/location.svg'
+import { corpIcon, corpInfoIcon, locationIcon, searchIcon, logoShortIcon, burgerButtonIcon, sortArrowDownIcon } from '@/assets/icons/index'
+import logoIcon from '@/assets/logo.png'
+
 
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .vertical-line {
     @media (max-width: 1000px) {
         display: none;
@@ -152,7 +147,7 @@ import locationIcon from '@/assets/icons/location.svg'
     }
 
     @media (max-width: 1000px) {
-        min-width: 63%;
+
 
         margin-left: 20px;
         margin-left: auto;

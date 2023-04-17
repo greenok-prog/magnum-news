@@ -29,7 +29,7 @@ function openHandler() {
     isOpened.value = !isOpened.value
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 .links-list {
 
     width: 100%;
@@ -42,6 +42,7 @@ function openHandler() {
     }
 
     &__title {
+        width: 100%;
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
@@ -50,7 +51,7 @@ function openHandler() {
 
         @media (max-width:1100px) {
             padding: 9px 0;
-            display: block;
+
             display: flex;
             align-items: center;
             justify-content: space-between;

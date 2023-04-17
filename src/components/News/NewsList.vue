@@ -1,7 +1,7 @@
 <template>
-    <div class="news-list" >
+    <div class="news-list">
         <NewsListItem v-for="newsItem in props.newsList" :key="newsItem.id" :newsItem="newsItem" />
-        
+
     </div>
 </template>
 
@@ -15,7 +15,7 @@ const props = defineProps<{
 }>()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .news-list {
     margin-top: -24px;
     display: flex;
