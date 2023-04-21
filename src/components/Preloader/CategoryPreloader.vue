@@ -1,6 +1,6 @@
 <template>
     <ul class="sorting-preloader">
-        <li v-for="(button, index) in [1, 2, 3, 4]" :key="index" class="sorting-list__item">
+        <li v-for="(button, index) in [1, 2, 3, 4]" :key="index" class="sorting-preloader__item">
         </li>
     </ul>
 </template>
