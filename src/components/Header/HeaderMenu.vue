@@ -1,16 +1,21 @@
 <template>
-    <Teleport to="body">
-        <div v-if="isOpened" class="header-menu">
-
+    
+        <div v-show="isOpened" class="header-menu">
+            <p @click="emit('closeMenu')">fsdfds</p>
         </div>
-    </Teleport>
+  
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 
+const props = defineProps<{
+    isOpened:boolean
+}>()
+const emit = defineEmits<{
+    (e:'closeMenu'):void
+}>()
 
-const isOpened = ref<boolean>(false)
+const {isOpened} = props
 </script>
 
 <style lang="scss">
@@ -18,5 +23,9 @@ const isOpened = ref<boolean>(false)
     width: 100%;
     height: 100vh;
     background-color: #fff;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-    <ul class="sorting-list">
+    <ul class="sorting-preloader">
         <li v-for="(button, index) in [1, 2, 3, 4]" :key="index" class="sorting-list__item">
         </li>
     </ul>
 </template>
 
 <style lang="scss">
-.sorting-list {
+.sorting-preloader {
     display: flex;
     justify-content: flex-start;
     align-items: center;

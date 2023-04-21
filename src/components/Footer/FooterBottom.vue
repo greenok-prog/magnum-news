@@ -1,6 +1,9 @@
 <template>
-    <div class="footer-bottom container">
-        <p class="footer-bottom__text">Magnum Cash & Carry @2021 Все права защищены</p>
+    <div class=" footer-bottom ">
+        <div class="footer-bottom__inner container">
+            <p class="footer-bottom__text">Magnum Cash & Carry @2021 Все права защищены</p>
+        </div>
+
     </div>
 </template>
 

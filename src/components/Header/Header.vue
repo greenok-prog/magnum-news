@@ -1,9 +1,9 @@
 <template>
    <header class="header">
       <div class="container">
-         <HeaderTop />
+         <HeaderTop @openMenu="openMenuHandler" />
          <Navbar />
-         <HeaderMenu />
+         <HeaderMenu @closeMenu="closeMenuHandler" :isOpened="menuIsOpened" />
       </div>
    </header>
 </template>
@@ -12,7 +12,15 @@
 import HeaderTop from '@/components/Header/HeaderTop.vue';
 import Navbar from './Navbar.vue';
 import HeaderMenu from './HeaderMenu.vue';
+import { ref } from 'vue';
 
+const menuIsOpened = ref<boolean>(false)
+const openMenuHandler = () => {
+   menuIsOpened.value = true
+}
+const closeMenuHandler = () => {
+   menuIsOpened.value = false
+}
 
 </script>
 

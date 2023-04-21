@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Cera Pro';
     src: url('./fonts/CeraPro-Regular.eot');
@@ -90,40 +89,3 @@
     font-display: swap;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cera Pro';
-
-}
-
-
-
-
-.vertical-line {
-    width: 1px;
-    height: 38px;
-    background-color: #ECECEC;
-}
-
-.container {
-
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 0 auto;
-    transition: all 0.2s ease-in-out;
-    max-width: 1600px;
-    width: 100%;
-
-    @media (max-width: 1250px) {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    @media (max-width: 1000px) {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-}

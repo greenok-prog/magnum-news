@@ -3,13 +3,16 @@
         <NewsFullInfo :newsHits="String(props.attributes.hits)" :publishedAt="props.attributes.publishedAt" />
         <div class="news-full__text">
             <img class="news-full__header-image" :src="imageUrl" alt="">
+            <div>
+
+            </div>
             <div class="news-full__article">
                 <p class="news-full__element" v-for="text in formatedString">
-                    <strong class="news-full__element__strong" v-if="text.type === 'bold'">{{ text.text }}</strong>
-                    <em class="news-full__element__em" v-else-if="text.type === 'italic'">{{ text.text }}</em>
+                    <strong class="news-full__element__strong" v-if="text.type === 'bold'" v-html="text.text"></strong>
+                    <em class="news-full__element__em" v-else-if="text.type === 'italic'" v-html="text.text"></em>
                     <img class="news-full__element__img" v-else-if="text.type === 'image'" :src="text.text" />
                     <br v-else-if="text.type === 'space'" />
-                    <span v-else-if="text.type === 'regular'">{{ text.text }}</span>
+                    <span v-else-if="text.type === 'regular'" v-html="text.text"></span>
                 </p>
             </div>
         </div>
@@ -89,6 +92,11 @@ onMounted(() => {
 
         em {
             margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #F50F64;
         }
     }
 }

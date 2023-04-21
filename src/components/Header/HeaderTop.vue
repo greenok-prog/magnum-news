@@ -1,7 +1,7 @@
 <template>
     <div class="header-top">
-        <img :src="burgerButtonIcon" class="burger-button" alt="burgerButton">
-        <img :src="logoIcon" class="header-top__logo logo" alt="logo">
+        <img @click="emit('openMenu')" :src="burgerButtonIcon" class="burger-button" alt="burgerButton">
+        <img @click="openMenu" :src="logoIcon" class="header-top__logo logo" alt="logo">
         <img :src="logoShortIcon" class="header-top__logo logo-short" alt="logo short">
         <div class="header-top__corp">
             <img :src="corpIcon" alt="arrow left">
@@ -34,7 +34,10 @@
 import { corpIcon, corpInfoIcon, locationIcon, searchIcon, logoShortIcon, burgerButtonIcon, sortArrowDownIcon } from '@/assets/icons/index'
 import logoIcon from '@/assets/logo.png'
 
-
+const emit = defineEmits(['openMenu'])
+function openMenu() {
+    emit('openMenu')
+}
 </script>
 
 <style  lang="scss">
