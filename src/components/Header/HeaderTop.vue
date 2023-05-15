@@ -19,25 +19,22 @@
                 <img :src="sortArrowDownIcon" alt="arrow down">
             </div>
         </div>
-        <div class="location-block">
-            <div class="location-block__city">
-                <img :src="locationIcon" alt="location icon">
-                <p>АЛМ</p>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="location-block__lang">RU</div>
-        </div>
+        <Location :selectedCity="selectedCity" @openCityMenu="emit('openCityMenu')" />
     </div>
 </template>
 
 <script lang="ts" setup>
 import { corpIcon, corpInfoIcon, locationIcon, searchIcon, logoShortIcon, burgerButtonIcon, sortArrowDownIcon } from '@/assets/icons/index'
 import logoIcon from '@/assets/logo.png'
+import Location from './Location.vue'
 
-const emit = defineEmits(['openMenu'])
-function openMenu() {
-    emit('openMenu')
-}
+
+const emit = defineEmits(['openMenu', 'openCityMenu'])
+
+const props = defineProps<{
+    selectedCity: string
+}>()
+
 </script>
 
 <style  lang="scss">
@@ -222,44 +219,6 @@ function openMenu() {
         }
 
 
-    }
-}
-
-.location-block {
-    width: 157px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F3F3F3;
-    padding: 6px 18px;
-    box-shadow: 3px 4px 12px -6px rgba(84, 84, 84, 0.15);
-    border-radius: 15px;
-    color: #F50F64;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 85.98%;
-
-    @media (max-width: 1200px) {
-        display: none;
-    }
-
-    &__city {
-        width: 60%;
-        display: flex;
-        align-items: center;
-
-        p {
-            margin-left: 10px;
-        }
-
-    }
-
-    &__lang {
-        width: 40%;
-        display: flex;
-        margin-right: -10px;
-        justify-content: center;
-        align-items: center;
     }
 }
 </style>

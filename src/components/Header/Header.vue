@@ -1,9 +1,12 @@
 <template>
    <header class="header">
       <div class="container">
-         <HeaderTop @openMenu="openMenuHandler" />
+         <HeaderTop :selectedCity="selectedCity" @openCityMenu="openCityMenu" @openMenu="openMenuHandler" />
          <Navbar />
-         <HeaderMenu @closeMenu="closeMenuHandler" :isOpened="menuIsOpened" />
+         <HeaderMenu @openCityMenu="openCityMenu" :selectedCity="selectedCity" :cityList="cities"
+            @closeMenu="closeMenuHandler" :isOpened="menuIsOpened" />
+         <CityListMenu :selectedCity="selectedCity" @selectCity="selectCity" :cityList="cities" v-if="cityMenuIsOpened"
+            @closeMenu="closeCityMenu" />
       </div>
    </header>
 </template>
@@ -13,10 +16,23 @@ import HeaderTop from '@/components/Header/HeaderTop.vue';
 import Navbar from './Navbar.vue';
 import HeaderMenu from './HeaderMenu.vue';
 import { ref } from 'vue';
+import CityListMenu from './CityListMenu.vue';
+const cities = ['Алматы', 'Шымкент', 'Астана', 'Актау']
+const selectedCity = ref<string>('Алматы')
+const selectCity = (city: string) => {
+   selectedCity.value = city
 
+}
 const menuIsOpened = ref<boolean>(false)
 const openMenuHandler = () => {
    menuIsOpened.value = true
+}
+const cityMenuIsOpened = ref<boolean>(false)
+const openCityMenu = () => {
+   cityMenuIsOpened.value = true
+}
+const closeCityMenu = () => {
+   cityMenuIsOpened.value = false
 }
 const closeMenuHandler = () => {
    menuIsOpened.value = false
