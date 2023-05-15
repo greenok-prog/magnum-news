@@ -12,7 +12,6 @@
                 <Location :selected-city="props.selectedCity" @openCityMenu="emit('openCityMenu')" />
             </div>
             <FooterNavbar class="header-menu__bottom" />
-
         </div>
     </div>
 </template>
